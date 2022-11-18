@@ -39,39 +39,77 @@
 // Desktop first
 
 @mixin vp-1919 {
-  @media (max-width: ($vp-1920 - 1px)) {
+  @media (max-width: ($vp-1920 - 0.06em)) {
     @content;
   }
 }
 
 @mixin vp-1439 {
-  @media (max-width: ($vp-1440 - 1px)) {
+  @media (max-width: ($vp-1440 - 0.06em)) {
+    @content;
+  }
+}
+
+@mixin vp-1366 {
+  @media (max-width: ($vp-1366 - 0.06em)) {
     @content;
   }
 }
 
 @mixin vp-1279 {
-  @media (max-width: ($vp-1280 - 1px)) {
+  @media (max-width: ($vp-1280 - 0.06em)) {
     @content;
   }
 }
 
 @mixin vp-1023 {
-  @media (max-width: ($vp-1024 - 1px)) {
+  @media (max-width: ($vp-1024 - 0.06em)) {
     @content;
   }
 }
 
 @mixin vp-767 {
-  @media (max-width: ($vp-768 - 1px)) {
+  @media (max-width: ($vp-768 - 0.06em)) {
     @content;
   }
 }
 
 @mixin vp-374 {
-  @media (max-width: ($vp-375 - 1px)) {
+  @media (max-width: ($vp-375 - 0.06em)) {
     @content;
   }
+}
+
+@mixin vp-320 {
+  @media (max-width: ($vp-320 - 0.06em)) {
+    @content;
+  }
+}
+
+// Fonts
+
+@mixin Montserrat400 {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin Montserrat500 {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+@mixin Montserrat600 {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+}
+
+@mixin Montserrat700 {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
 }
 
 // Mobile first

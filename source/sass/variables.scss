@@ -3,8 +3,8 @@
 
 // Default
 
-$color-default-black:               #000000;
-$color-default-white:               #ffffff;
+$color-default-black:               #011C40;
+$color-default-white:               #f9fbfd;
 $color-transparent:                 rgba(255, 255, 255, 0);
 
 // Project palette
@@ -43,13 +43,17 @@ $trans-600:                         0.6s $tf-default;
 // Viewports
 // ---------------------------------
 
-$vp-320:                            320px;
-$vp-375:                            375px;
-$vp-768:                            768px;
-$vp-1024:                           1024px;
-$vp-1280:                           1280px;
-$vp-1440:                           1440px;
-$vp-1920:                           1920px;
+$vp-320:                            20em;
+$vp-375:                            23.44em;
+$vp-768:                            48em;
+$vp-1024:                           64em;
+$vp-1280:                           80em;
+$vp-1366:                           85.38em;
+$vp-1440:                           90em;
+$vp-1700:                           106.25em;
+$vp-1860:                           116.25em;
+$vp-1920:                           120em;
+$vp-2600:                           162.63em;
 
 // Retina
 // ---------------------------------

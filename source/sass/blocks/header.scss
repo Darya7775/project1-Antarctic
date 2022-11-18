@@ -1,0 +1,183 @@
+.header {
+  width: 100%;
+  min-height: 120px;
+
+  color: $color-default-white;
+  background-color: rgb(47, 107, 247);
+
+  @include vp-1023 {
+    min-height: 100px;
+  }
+
+  @include vp-767 {
+    min-height: 70px;
+  }
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+
+  padding-top: 2.19rem;
+  padding-bottom: 2.19rem;
+
+  @include vp-1023 {
+    padding-top: 1.88rem;
+    padding-bottom: 1.88rem;
+  }
+
+  @include vp-767 {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+
+    position: relative;
+  }
+}
+
+.header__logo {
+  display: block;
+  width: 70px;
+  height: 38px;
+
+  @include vp-1023 {
+    width: 38px;
+    height: 20px;
+  }
+
+  @include vp-767 {
+    width: 42px;
+    height: 22px;
+  }
+}
+
+.header__img {
+  width: 70px;
+  height: 38px;
+
+  @include vp-1023 {
+    width: 38px;
+    height: 20px;
+  }
+
+  @include vp-767 {
+    width: 42px;
+    height: 22px;
+  }
+}
+
+.header__list {
+  margin: 0;
+  padding: 0;
+  width: 71.5rem;
+
+  list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1.44rem;
+  row-gap: 1rem;
+
+  @include vp-1919 {
+    width: 41.5rem;
+  }
+
+  @include vp-1439 {
+    width: 33.3rem;
+  }
+
+  @include vp-767 {
+    width: 17.82rem;
+    background-color: $color-default-white;
+    padding: 5.31rem 0 1.5rem 1.56rem;
+
+    flex-direction: column;
+    row-gap: 1.75rem;
+
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+
+    &::before {
+      content: "";
+      width: 42px;
+      height: 22px;
+
+      position: absolute;
+      top: 1.25rem;
+      left: 0.94rem;
+
+      background-image: url("../img/svg/logo-black.svg");
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.header__link {
+  @include Montserrat500;
+  font-size: 0.88em;
+  line-height: 1.21em;
+  color: $color-default-white;
+
+  @include hover-focus {
+    opacity: 0.7;
+  }
+
+  @include vp-767 {
+    font-size: 1.13em;
+    line-height: 0.82em;
+    color: $color-default-black;
+  }
+}
+
+.header__button {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+    width: 24px;
+    height: 14px;
+
+    border: none;
+    background-color: inherit;
+    background-image: url("../img/svg/burger.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &[data-state="active"] {
+      height: 18px;
+
+      position: absolute;
+      z-index: 2;
+      top: 1.56rem;
+      right: 0.94rem;
+
+      &:before,
+      &:after {
+        content: "";
+        width: 24px;
+        height: 2px;
+
+        position: absolute;
+        top: 0.5rem;
+        right: 0;
+
+        background-color: $color-default-black;
+      }
+
+      &:before {
+        transform: rotate(45deg);
+      }
+
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
+
+    &[data-state="active"] ~ .header__logo {
+      display: none;
+    }
+  }
+}
