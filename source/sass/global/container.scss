@@ -5,6 +5,16 @@
   padding-left: 21.88em;
   padding-right: 21.88em;
 
+  @include vp-1919 {
+    padding-left: 12.5em;
+    padding-right: 12.5em;
+  }
+
+  @include vp-1699 {
+    padding-left: 9.37em;
+    padding-right: 9.37em;
+  }
+
   @include vp-1439 {
     padding-left: 7.5em;
     padding-right: 7.5em;
