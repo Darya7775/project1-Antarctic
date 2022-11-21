@@ -1,0 +1,62 @@
+.main {
+  width: 100%;
+
+  @include Background;
+}
+
+.main__container {
+  padding-top: 10.19rem;
+  padding-bottom: 15.81rem;
+
+  @include vp-1023 {
+    padding-top: 11.25rem;
+    padding-bottom: 17.5rem;
+  }
+
+  @include vp-767 {
+    padding-top: 7.19rem;
+    padding-bottom: 11.56rem;
+  }
+}
+
+.main__container h1 {
+  margin: 0 0 1.87rem 0;
+  padding: 0;
+
+  @include Montserrat700;
+  font-size: 3.38em;
+  line-height: 1.22em;
+  color: $color-default-white;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  @include vp-1023 {
+    font-size: 3.13em;
+    line-height: 1.22em;
+  }
+
+  @include vp-767 {
+    font-size: 2.25em;
+    line-height: 1.25em;
+
+    margin: 0 0 1.56rem 0;
+  }
+}
+
+.main__container p {
+  margin: 0;
+
+  font-size: 1.25em;
+  line-height: 1.2em;
+  color: $color-default-white;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  @include vp-1023 {
+    font-size: 1.13em;
+    line-height: 1.22em;
+  }
+
+  @include vp-767 {
+    font-size: 1em;
+    line-height: 1.4em;
+  }
+}

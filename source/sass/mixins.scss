@@ -130,6 +130,44 @@
   font-weight: 700;
 }
 
+// all
+
+@mixin Background {
+  background-image: url("../img/main-background.jpg");
+
+  @include retina {
+    background-image: url("../img/main-background@2x.jpg");
+  }
+
+  background-image: url("../img/main-background.webp");
+
+  @include retina {
+    background-image: url("../img/main-background@2x.webp");
+  }
+
+  background-color: rgb(47, 107, 247);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+@mixin title {
+  @include Montserrat600;
+  font-size: 1.75em;
+  line-height: 1.5em;
+
+  @include vp-1023 {
+    font-size: 1.63em;
+    line-height: 140%;
+    margin: 0 0 1.87rem 0;
+  }
+
+  @include vp-767 {
+    font-size: 1.5em;
+  }
+}
+
 // Mobile first
 
 // @mixin vp-375 {

@@ -389,7 +389,7 @@ template {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../fonts/montserrat_regular.woff2") format("woff2"), url("../fonts/montserrat_regular.woff") format("woff");
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
 }
 
 @font-face {
@@ -397,7 +397,7 @@ template {
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url("../fonts/montserrat_medium.woff2") format("woff2"), url("../fonts/montserrat_medium.woff") format("woff");
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
 }
 
 @font-face {
@@ -405,7 +405,7 @@ template {
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url("../fonts/montserrat_semibold.woff2") format("woff2"), url("../fonts/montserrat_semibold.woff") format("woff");
+  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
 }
 
 @font-face {
@@ -413,7 +413,7 @@ template {
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("../fonts/montserrat_bold.woff2") format("woff2"), url("../fonts/montserrat_bold.woff") format("woff");
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
 }
 
 *,
@@ -782,8 +782,15 @@ button,
 .header {
   width: 100%;
   min-height: 120px;
+  position: relative;
   color: #f9fbfd;
+  background-image: url("../img/main-background.jpg");
+  background-image: url("../img/main-background.webp");
   background-color: rgb(47, 107, 247);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .header__container {
@@ -935,6 +942,164 @@ button,
   fill: #f9fbfd;
 }
 
+.main {
+  width: 100%;
+  background-image: url("../img/main-background.jpg");
+  background-image: url("../img/main-background.webp");
+  background-color: rgb(47, 107, 247);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.main__container {
+  padding-top: 10.19rem;
+  padding-bottom: 15.81rem;
+}
+
+.main__container h1 {
+  margin: 0 0 1.87rem 0;
+  padding: 0;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.38em;
+  line-height: 1.22em;
+  color: #f9fbfd;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.main__container p {
+  margin: 0;
+  font-size: 1.25em;
+  line-height: 1.2em;
+  color: #f9fbfd;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.description {
+  width: 100%;
+}
+
+.description__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 35rem 42rem;
+  grid-template-columns: 35rem 42rem;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 4.2rem;
+  padding-top: 7.5rem;
+  padding-bottom: 9.06rem;
+}
+
+.description__wrap {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  -ms-grid-column-align: start;
+  justify-self: start;
+}
+
+.description__wrap h2 {
+  margin: 0 0 2.5rem 0;
+  padding: 0;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.75em;
+  line-height: 1.5em;
+}
+
+.description__wrap p {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+.description__img {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  margin: 0 auto;
+}
+
+.advantages {
+  width: 100%;
+  background-image: url("../img/advantages-background.jpg");
+  background-image: url("../img/advantages-background.webp");
+  background-color: #e3ecf6;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.advantages__container {
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+}
+
+.advantages__container h2 {
+  margin: 0 0 3.75rem 0;
+  padding: 0;
+  text-align: center;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.75em;
+  line-height: 1.5em;
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 4rem;
+}
+
+.advantages__item {
+  background-color: #f9fbfd;
+  padding: 5.44rem 2.62rem 3.13rem 1.87rem;
+}
+
+.advantages__item--ship-face {
+  background-image: url("../img/svg/ship-face.svg");
+  background-repeat: no-repeat;
+  background-position: 2rem 2rem;
+}
+
+.advantages__item--mark {
+  background-image: url("../img/svg/mark.svg");
+  background-repeat: no-repeat;
+  background-position: 2rem 2rem;
+}
+
+.advantages__item--ship-side {
+  background-image: url("../img/svg/ship-side.svg");
+  background-repeat: no-repeat;
+  background-position: 2rem 2rem;
+}
+
+.advantages__item h3 {
+  margin: 0;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.13em;
+  line-height: 150%;
+}
+
+.advantages__item p {
+  margin: 0;
+  font-size: 0.88em;
+  line-height: 140%;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -1009,12 +1174,21 @@ button,
   .social {
     width: 6.63rem;
   }
+
+  .advantages__list {
+    gap: 3rem;
+  }
 }
 
 @media (max-width: 106.19em) {
   .container {
     padding-left: 9.37em;
     padding-right: 9.37em;
+  }
+
+  .description__container {
+    -ms-grid-columns: 32rem 35rem;
+    grid-template-columns: 32rem 35rem;
   }
 }
 
@@ -1030,6 +1204,10 @@ button,
 
   .footer__list {
     margin-right: 14.31rem;
+  }
+
+  .advantages__list {
+    gap: 2.5rem;
   }
 }
 
@@ -1053,6 +1231,14 @@ button,
   .footer__link {
     font-size: 0.75em;
     line-height: 1.25em;
+  }
+
+  .description__container {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.56rem;
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
   }
 }
 
@@ -1099,6 +1285,68 @@ button,
   .social__link svg {
     width: 16px;
     height: 16px;
+  }
+
+  .main__container {
+    padding-top: 11.25rem;
+    padding-bottom: 17.5rem;
+  }
+
+  .main__container h1 {
+    font-size: 3.13em;
+    line-height: 1.22em;
+  }
+
+  .main__container p {
+    font-size: 1.13em;
+    line-height: 1.22em;
+  }
+
+  .description__wrap h2 {
+    font-size: 1.63em;
+    line-height: 140%;
+    margin: 0 0 1.87rem 0;
+  }
+
+  .description__wrap h2 {
+    margin: 0 0 1.87rem 0;
+  }
+
+  .description__img {
+    -ms-flex-item-align: start;
+    -ms-grid-row-align: start;
+    align-self: start;
+  }
+
+  .advantages__container {
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+  }
+
+  .advantages__container h2 {
+    font-size: 1.63em;
+    line-height: 140%;
+    margin: 0 0 1.87rem 0;
+  }
+
+  .advantages__list {
+    gap: 1.88rem;
+  }
+
+  .advantages__item {
+    padding: 4.75rem 1rem 1.56rem 1.25rem;
+  }
+
+  .advantages__item--ship-face {
+    background-size: 21px 26px;
+  }
+
+  .advantages__item--mark {
+    background-size: 27px 26px;
+  }
+
+  .advantages__item--ship-side {
+    background-size: 37px 26px;
   }
 }
 
@@ -1222,6 +1470,54 @@ button,
     flex-direction: column;
     margin-right: 0;
   }
+
+  .main__container {
+    padding-top: 7.19rem;
+    padding-bottom: 11.56rem;
+  }
+
+  .main__container h1 {
+    font-size: 2.25em;
+    line-height: 1.25em;
+    margin: 0 0 1.56rem 0;
+  }
+
+  .main__container p {
+    font-size: 1em;
+    line-height: 1.4em;
+  }
+
+  .description__container {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 3.12rem;
+  }
+
+  .description__wrap h2 {
+    font-size: 1.5em;
+  }
+
+  .advantages__container {
+    padding-top: 4.06rem;
+    padding-bottom: 4.06rem;
+  }
+
+  .advantages__container h2 {
+    font-size: 1.5em;
+  }
+
+  .advantages__container h2 {
+    margin: 0 0 2.5rem 0;
+  }
+
+  .advantages__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .advantages__item {
+    padding: 4.75rem 0.94rem 1.56rem 1.25rem;
+  }
 }
 
 @media (max-width: 47.94em) and (hover: hover) {
@@ -1249,5 +1545,31 @@ button,
 
   .social__link:hover:not(.focus-visible) {
     opacity: 0.7;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .header {
+    background-image: url("../img/main-background@2x.jpg");
+  }
+
+  .header {
+    background-image: url("../img/main-background@2x.webp");
+  }
+
+  .main {
+    background-image: url("../img/main-background@2x.jpg");
+  }
+
+  .main {
+    background-image: url("../img/main-background@2x.webp");
+  }
+
+  .advantages {
+    background-image: url("../img/advantages-backgroundd@2x.jpg");
+  }
+
+  .advantages {
+    background-image: url("../img/advantages-background@2x.webp");
   }
 }

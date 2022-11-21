@@ -1,0 +1,135 @@
+.advantages {
+  width: 100%;
+
+  background-image: url("../img/advantages-background.jpg");
+
+  @include retina {
+    background-image: url("../img/advantages-backgroundd@2x.jpg");
+  }
+
+  background-image: url("../img/advantages-background.webp");
+
+  @include retina {
+    background-image: url("../img/advantages-background@2x.webp");
+  }
+
+  background-color: #e3ecf6;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.advantages__container {
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+
+  @include vp-1023 {
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+  }
+
+  @include vp-767 {
+    padding-top: 4.06rem;
+    padding-bottom: 4.06rem;
+  }
+}
+
+.advantages__container h2 {
+  margin: 0 0 3.75rem 0;
+  padding: 0;
+
+  text-align: center;
+
+  @include title;
+
+  @include vp-767 {
+    margin: 0 0 2.5rem 0;
+  }
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 4rem;
+
+  @include vp-1919 {
+    gap: 3rem;
+  }
+
+  @include vp-1439 {
+    gap: 2.5rem;
+  }
+
+  @include vp-1023 {
+    gap: 1.88rem;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.advantages__item {
+  background-color: $color-default-white;
+
+  padding: 5.44rem 2.62rem 3.13rem 1.87rem;
+
+  @include vp-1023 {
+    padding: 4.75rem 1rem 1.56rem 1.25rem;
+  }
+
+  @include vp-767 {
+    padding: 4.75rem 0.94rem 1.56rem 1.25rem;
+  }
+}
+
+.advantages__item--ship-face {
+  background-image: url("../img/svg/ship-face.svg");
+  background-repeat: no-repeat;
+  background-position: 2rem 2rem;
+
+  @include vp-1023 {
+    background-size: 21px 26px;
+  }
+}
+
+.advantages__item--mark {
+  background-image: url("../img/svg/mark.svg");
+  background-repeat: no-repeat;
+  background-position: 2rem 2rem;
+
+  @include vp-1023 {
+    background-size: 27px 26px;
+  }
+}
+
+.advantages__item--ship-side {
+  background-image: url("../img/svg/ship-side.svg");
+  background-repeat: no-repeat;
+  background-position: 2rem 2rem;
+
+  @include vp-1023 {
+    background-size: 37px 26px;
+  }
+}
+
+.advantages__item h3 {
+  margin: 0;
+
+  @include Montserrat500;
+  font-size: 1.13em;
+  line-height: 150%;
+}
+
+.advantages__item p {
+  margin: 0;
+
+  font-size: 0.88em;
+  line-height: 140%;
+}
+
+

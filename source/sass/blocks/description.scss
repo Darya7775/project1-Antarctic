@@ -1,0 +1,61 @@
+.description {
+  width: 100%;
+}
+
+.description__container {
+  display: grid;
+  grid-template-columns: 35rem 42rem;
+  justify-content: space-between;
+  gap: 4.2rem;
+
+  padding-top: 7.5rem;
+  padding-bottom: 9.06rem;
+
+  @include vp-1699 {
+    grid-template-columns: 32rem 35rem;
+  }
+
+  @include vp-1279 {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.56rem;
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    gap: 3.12rem;
+  }
+}
+
+.description__wrap {
+  align-self: center;
+  justify-self: start;
+}
+
+.description__wrap h2 {
+  margin: 0 0 2.5rem 0;
+  padding: 0;
+
+  @include title;
+
+  @include vp-1023 {
+    margin: 0 0 1.87rem 0;
+  }
+}
+
+.description__wrap p {
+  margin: 0;
+
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+.description__img {
+  align-self: center;
+  margin: 0 auto;
+
+  @include vp-1023 {
+    align-self: start;
+  }
+}

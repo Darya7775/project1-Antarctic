@@ -2,8 +2,10 @@
   width: 100%;
   min-height: 120px;
 
+  position: relative;
   color: $color-default-white;
-  background-color: rgb(47, 107, 247);
+
+  @include Background;
 
   @include vp-1023 {
     min-height: 100px;

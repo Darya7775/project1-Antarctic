@@ -7,14 +7,14 @@
     <meta name="description" content="Описание проекта">
     <title>ProjectName</title>
     <link rel="stylesheet" href="css/style.min.css">
-    <link rel="stylesheet" href="fonts/montserrat_regular.woff2" as="font">
-    <link rel="stylesheet" href="fonts/montserrat_regular.woff" as="font">
-    <link rel="stylesheet" href="fonts/montserrat_medium.woff2" as="font">
-    <link rel="stylesheet" href="fonts/montserrat_medium.woff" as="font">
-    <link rel="stylesheet" href="fonts/montserrat_semibold.woff2" as="font">
-    <link rel="stylesheet" href="fonts/montserrat_semibold.woff" as="font">
-    <link rel="stylesheet" href="fonts/montserrat_bold.woff2" as="font">
-    <link rel="stylesheet" href="fonts/montserrat_bold.woff" as="font">
+    <link rel="stylesheet" href="fonts/Montserrat-Regular.woff2" as="font">
+    <link rel="stylesheet" href="fonts/Montserrat-Regular.woff" as="font">
+    <link rel="stylesheet" href="fonts/Montserrat-Medium.woff2" as="font">
+    <link rel="stylesheet" href="fonts/Montserrat-Medium.woff" as="font">
+    <link rel="stylesheet" href="fonts/Montserrat-SemiBold.woff2" as="font">
+    <link rel="stylesheet" href="fonts/Montserrat-SemiBold.woff" as="font">
+    <link rel="stylesheet" href="fonts/Montserrat-Bold.woff2" as="font">
+    <link rel="stylesheet" href="fonts/Montserrat-Bold.woff" as="font">
   </head>
   <body>
     <div class="wrapper">
@@ -43,8 +43,48 @@
         </div>
       </header>
       <main>
-        <section class="">
-          <div class="container">
+        <section class="main">
+          <div class="main__container container">
+            <h1>Круизы в&nbsp;Антарктику</h1>
+            <p>Волшебный мир айсбергов и&nbsp;пингвинов</p>
+          </div>
+        </section>
+        <section class="description">
+          <div class="description__container container">
+            <div class="description__wrap">
+              <h2>Путешествие на&nbsp;край Земли</h2>
+              <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
+            </div>
+            <picture>
+              <source srcset="img/penguins.webp 1x, img/penguins@2x.webp 2x">
+              <img class="description__img" src="img/penguins.jpg" srcset="img/penguins@2x.jpg" width="560" height="301" alt="пингвины">
+            </picture>
+          </div>
+        </section>
+        <section class="advantages">
+          <div class="advantages__container container">
+            <h2>Преимущества</h2>
+            <ul class="advantages__list">
+              <li class="advantages__item advantages__item--ship-face">
+                <h3>Небольшой круизный лайнер</h3>
+                <p>Круизный лайнер, рассчитанный всего лишь
+                  на&nbsp;300&nbsp;гостей, поможет избежать шума и&nbsp;очередей и&nbsp;даст
+                  возможность насладиться видами и&nbsp;природой.
+                </p>
+              </li>
+              <li class="advantages__item advantages__item--mark">
+                <h3>Система все включено</h3>
+                <p>Все наши круизы работают по&nbsp;системе &laquo;Все Включено&raquo;.
+                  Великолепные блюда и&nbsp;безлимитный бар доступны для вас 24&nbsp;часа.
+                </p>
+              </li>
+              <li class="advantages__item advantages__item--ship-side">
+                <h3>Экскурсионные туры на&nbsp;Zodiac</h3>
+                <p>Экскурсионные туры к&nbsp;берегам Антарктиды совершаются
+                  на&nbsp;оборудованных лодках типа Zodiack c&nbsp;опытными экскурсоводами.
+                </p>
+              </li>
+            </ul>
           </div>
         </section>
       </main>
