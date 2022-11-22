@@ -1,0 +1,24 @@
+.booking {
+  width: 100%;
+
+  background-image: url("../img/booking-background.jpg");
+
+  @include retina {
+    background-image: url("../img/booking-background@2x.jpg");
+  }
+
+  background-image: url("../img/booking-background.webp");
+
+  @include retina {
+    background-image: url("../img/booking-background@2x.webp");
+  }
+
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.booking__container {
+  padding: 3.13rem 10.19rem;
+
+  display: flex;
+}

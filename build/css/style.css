@@ -1100,6 +1100,228 @@ button,
   line-height: 140%;
 }
 
+.cruises {
+  width: 100%;
+  background-color: #f9fbfd;
+}
+
+.cruises__container {
+  padding-top: 5.94rem;
+  padding-bottom: 7.5rem;
+}
+
+.cruises__container h2 {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.75em;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+.cruises__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1.88rem;
+}
+
+.cruises__item {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  padding: 4.39rem 1.6rem 2.19rem 1.5rem;
+  background-color: #011c40;
+}
+
+.cruises__item:hover {
+  padding: 1.9rem 1.6rem 2.19rem 1.5rem;
+}
+
+.cruises__item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.cruises__item:hover img {
+  z-index: -1;
+}
+
+.cruises__item h3 {
+  margin: 0;
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.13em;
+  line-height: 150%;
+  color: #f9fbfd;
+}
+
+.cruises__item:hover h3 {
+  position: static;
+  margin-bottom: 0.8rem;
+}
+
+.cruises__item--hover {
+  padding: 1.9rem 1.6rem 2.19rem 1.5rem;
+}
+
+.cruises__item--hover img {
+  z-index: -1;
+}
+
+.cruises__item--hover h3 {
+  position: static;
+  margin-bottom: 0.8rem;
+}
+
+.cruises__item h4 {
+  margin: 0;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.88em;
+  line-height: 140%;
+  color: #f9fbfd;
+}
+
+.cruises__item p {
+  margin: 0 0 0.8rem;
+  font-size: 0.88em;
+  line-height: 140%;
+  color: #f9fbfd;
+}
+
+.cruises__button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  border: none;
+  background-color: #f9fbfd;
+  color: #011C40;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.88em;
+  line-height: 150%;
+  padding: 0.6rem 0;
+  margin-top: 1.6rem;
+  cursor: pointer;
+}
+
+.cruises__button.focus-visible:focus {
+  opacity: 0.7;
+}
+
+.booking {
+  width: 100%;
+  background-image: url("../img/booking-background.jpg");
+  background-image: url("../img/booking-background.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.booking__container {
+  padding: 3.13rem 10.19rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form {
+  padding: 3.13rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.25rem;
+  background-color: #011C40;
+  -webkit-box-shadow: 0px 4px 45px rgba(1, 28, 64, 0.15);
+  box-shadow: 0px 4px 45px rgba(1, 28, 64, 0.15);
+}
+
+.form p {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.13em;
+  line-height: 150%;
+  color: #f9fbfd;
+}
+
+.form input {
+  padding: 0.69rem 1rem;
+  border: none;
+  background-color: #f9fbfd;
+}
+
+.form input::-webkit-input-placeholder {
+  font-size: 0.88em;
+  line-height: 150%;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form input::-moz-placeholder {
+  font-size: 0.88em;
+  line-height: 150%;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form input:-ms-input-placeholder {
+  font-size: 0.88em;
+  line-height: 150%;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form input::-ms-input-placeholder {
+  font-size: 0.88em;
+  line-height: 150%;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form input::placeholder {
+  font-size: 0.88em;
+  line-height: 150%;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form label {
+  font-size: 0.63em;
+  line-height: 130%;
+  color: #f9fbfd;
+}
+
+.form input[type=checkbox] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -1240,6 +1462,11 @@ button,
     padding-top: 6.25rem;
     padding-bottom: 6.25rem;
   }
+
+  .cruises__list {
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 @media (max-width: 63.94em) {
@@ -1347,6 +1574,22 @@ button,
 
   .advantages__item--ship-side {
     background-size: 37px 26px;
+  }
+
+  .cruises__container {
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+  }
+
+  .cruises__container h2 {
+    font-size: 1.63em;
+    line-height: 140%;
+    margin: 0 0 1.87rem 0;
+  }
+
+  .cruises__list {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -1518,6 +1761,20 @@ button,
   .advantages__item {
     padding: 4.75rem 0.94rem 1.56rem 1.25rem;
   }
+
+  .cruises__container {
+    padding-top: 4.06rem;
+    padding-bottom: 4.06rem;
+  }
+
+  .cruises__container h2 {
+    font-size: 1.5em;
+  }
+
+  .cruises__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 47.94em) and (hover: hover) {
@@ -1546,6 +1803,10 @@ button,
   .social__link:hover:not(.focus-visible) {
     opacity: 0.7;
   }
+
+  .cruises__button:hover:not(.focus-visible) {
+    opacity: 0.7;
+  }
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -1571,5 +1832,13 @@ button,
 
   .advantages {
     background-image: url("../img/advantages-background@2x.webp");
+  }
+
+  .booking {
+    background-image: url("../img/booking-background@2x.jpg");
+  }
+
+  .booking {
+    background-image: url("../img/booking-background@2x.webp");
   }
 }
