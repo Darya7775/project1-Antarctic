@@ -14,7 +14,7 @@
   @include vp-767 {
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.88rem;
+    gap: 1.8rem;
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
   }
@@ -42,7 +42,7 @@
   }
 
   @include vp-1919 {
-    width: 41rem;
+    width: 42.1rem;
   }
 
   @include vp-1439 {
@@ -59,7 +59,7 @@
   }
 
   @include vp-1023 {
-    width: 29.1rem;
+    width: 30.1rem;
     margin-right: 1rem;
     column-gap: 1.44rem;
   }
@@ -68,6 +68,7 @@
     width: 100%;
     flex-direction: column;
     margin-right: 0;
+    row-gap: 1rem;
   }
 }
 

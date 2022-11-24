@@ -139,17 +139,13 @@
     background-image: url("../img/main-background@2x.jpg");
   }
 
-  background-image: url("../img/main-background.webp");
-
-  @include retina {
-    background-image: url("../img/main-background@2x.webp");
-  }
-
   background-color: rgb(47, 107, 247);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 @mixin title {
@@ -165,6 +161,15 @@
 
   @include vp-767 {
     font-size: 1.5em;
+  }
+}
+
+@mixin icon-advantages__item {
+  background-repeat: no-repeat;
+  background-position: 1.9rem 2rem;
+
+  @include vp-1023 {
+    background-position: 1.24rem 1.6rem;
   }
 }
 

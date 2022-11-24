@@ -47,7 +47,7 @@
 
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: space-between;
   column-gap: 1.44rem;
   row-gap: 1rem;
 
@@ -56,7 +56,11 @@
   }
 
   @include vp-1439 {
-    width: 33.3rem;
+    width: 37.1rem;
+  }
+
+  @include vp-1023 {
+    width: 31.5rem;
   }
 
   @include vp-767 {
@@ -87,14 +91,36 @@
   }
 }
 
+.header__list--no-js {
+  @include vp-767 {
+    width: 100%;
+    background-color: $color-default-white;
+    padding: 5.31rem 0 1.5rem 1.56rem;
+
+    flex-direction: column;
+    row-gap: 1.75rem;
+
+    position: relative;
+    z-index: 1;
+    top: -20px;
+    right: -59px;
+  }
+}
+
+
 .header__link {
   @include Montserrat500;
-  font-size: 0.88em;
-  line-height: 1.21em;
+  font-size: 1em;
+  line-height: 1.25em;
   color: $color-default-white;
 
   @include hover-focus {
     opacity: 0.7;
+  }
+
+  @include vp-1023 {
+    font-size: 0.88em;
+    line-height: 1.21em;
   }
 
   @include vp-767 {

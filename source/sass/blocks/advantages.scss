@@ -7,42 +7,40 @@
     background-image: url("../img/advantages-backgroundd@2x.jpg");
   }
 
-  background-image: url("../img/advantages-background.webp");
-
-  @include retina {
-    background-image: url("../img/advantages-background@2x.webp");
-  }
-
   background-color: #e3ecf6;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .advantages__container {
-  padding-top: 7.5rem;
+  padding-top: 7rem;
   padding-bottom: 7.5rem;
 
   @include vp-1023 {
-    padding-top: 6.25rem;
+    padding-top: 5.6rem;
     padding-bottom: 6.25rem;
   }
 
   @include vp-767 {
-    padding-top: 4.06rem;
-    padding-bottom: 4.06rem;
+    padding-top: 3.6rem;
+    padding-bottom: 4.2rem;
   }
 }
 
 .advantages__container h2 {
-  margin: 0 0 3.75rem 0;
+  margin: 0 0 3rem 0;
   padding: 0;
 
   text-align: center;
 
   @include title;
 
+  @include vp-1023 {
+    margin: 0 0 3.2rem 0;
+  }
+
   @include vp-767 {
-    margin: 0 0 2.5rem 0;
+    margin: 0 0 2rem 0;
   }
 }
 
@@ -76,21 +74,20 @@
 .advantages__item {
   background-color: $color-default-white;
 
-  padding: 5.44rem 2.62rem 3.13rem 1.87rem;
+  padding: 5rem 2rem 2.9rem 1.87rem;
 
   @include vp-1023 {
-    padding: 4.75rem 1rem 1.56rem 1.25rem;
+    padding: 4.3rem 0.9rem 1.4rem 1.25rem;
   }
 
   @include vp-767 {
-    padding: 4.75rem 0.94rem 1.56rem 1.25rem;
+    padding: 4.4rem 0.94rem 1.3rem 1.25rem;
   }
 }
 
 .advantages__item--ship-face {
+  @include icon-advantages__item;
   background-image: url("../img/svg/ship-face.svg");
-  background-repeat: no-repeat;
-  background-position: 2rem 2rem;
 
   @include vp-1023 {
     background-size: 21px 26px;
@@ -98,9 +95,8 @@
 }
 
 .advantages__item--mark {
+  @include icon-advantages__item;
   background-image: url("../img/svg/mark.svg");
-  background-repeat: no-repeat;
-  background-position: 2rem 2rem;
 
   @include vp-1023 {
     background-size: 27px 26px;
@@ -108,21 +104,25 @@
 }
 
 .advantages__item--ship-side {
+  @include icon-advantages__item;
   background-image: url("../img/svg/ship-side.svg");
-  background-repeat: no-repeat;
-  background-position: 2rem 2rem;
 
   @include vp-1023 {
-    background-size: 37px 26px;
+    background-size: 36px 26px;
   }
 }
 
 .advantages__item h3 {
-  margin: 0;
+  margin: 0 0 0.5rem;
 
   @include Montserrat500;
   font-size: 1.13em;
   line-height: 150%;
+
+  @include vp-767 {
+    width: 83%;
+    margin: 0 0 0.3rem;
+  }
 }
 
 .advantages__item p {
@@ -131,5 +131,3 @@
   font-size: 0.88em;
   line-height: 140%;
 }
-
-

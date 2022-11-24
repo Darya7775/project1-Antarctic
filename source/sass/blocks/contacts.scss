@@ -1,0 +1,123 @@
+.contacts {
+  width: 100%;
+
+  background-color: $color-default-white;
+}
+
+.contacts__container {
+  padding-top: 7.5rem;
+  padding-bottom: 7.2rem;
+
+  display: flex;
+  align-items: center;
+  gap: 6.25rem;
+
+  @include vp-1279 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include vp-1023 {
+    padding-top: 6.25rem;
+    padding-bottom: 5.9rem;
+    gap: 1.88rem;
+  }
+
+  @include vp-767 {
+    padding-top: 3.6rem;
+    padding-bottom: 3.4rem;
+    gap: 2.5rem;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+  }
+}
+
+.contacts__wrap {
+  width: 100%;
+
+  @include vp-1439 {
+    width: 560px;
+  }
+
+  @include vp-1279 {
+    width: 100%;
+  }
+
+  @include vp-767 {
+    grid-area: 2/1/-1/-1;
+  }
+}
+
+.contacts__wrap iframe {
+  width: 100%;
+
+  @include vp-1439 {
+    width: 560px;
+  }
+
+  @include vp-1279 {
+    width: 100%;
+    height: 20.94rem;
+  }
+
+  @include vp-767 {
+    height: 19.75rem;
+  }
+}
+
+.contacts__wrapper p {
+  @include Montserrat500;
+  font-size: 1.13em;
+  line-height: 150%;
+
+  margin: 0 0 2rem;
+
+  @include vp-1023 {
+    margin: 0 0 1.7rem;
+  }
+}
+
+.contacts__address {
+  font-style: normal;
+
+  padding-left: 1.75rem;
+  margin-bottom: 1.2rem;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.13rem;
+    height: 1.38rem;
+
+    background-image: url("../img/svg/mark-address.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @include vp-1023 {
+    margin-bottom: 1.33rem;
+  }
+}
+
+.contacts__telephone {
+  padding-left: 1.75rem;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.13rem;
+    height: 1.13rem;
+
+    background-image: url("../img/svg/telephone.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

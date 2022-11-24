@@ -5,29 +5,39 @@
 }
 
 .cruises__container {
-  padding-top: 5.94rem;
+  padding-top: 5.3rem;
   padding-bottom: 7.5rem;
 
   @include vp-1023 {
-    padding-top: 6.25rem;
-    padding-bottom: 6.25rem;
+    padding-top: 5.6rem;
+    padding-bottom: 3.5rem;
   }
 
   @include vp-767 {
-    padding-top: 4.06rem;
-    padding-bottom: 4.06rem;
+    padding-top: 3.6rem;
+    padding-bottom: 3.7rem;
   }
 }
 
 .cruises__container h2 {
+  margin: 0 0 3.1rem;
+
   @include title;
 
   text-align: center;
+
+  @include vp-1023 {
+    margin: 0 0 3.2rem;
+  }
+
+  @include vp-767 {
+    margin: 0 0 2rem;
+  }
 }
 
 .cruises__list {
   margin: 0;
-  padding: 0;
+  padding: 0 0.9rem;
 
   list-style: none;
 
@@ -45,6 +55,7 @@
 
   @include vp-767 {
     grid-template-columns: 1fr;
+    padding: 0 0.6rem;
   }
 }
 
@@ -52,12 +63,16 @@
   display: grid;
   position: relative;
 
-  padding: 4.39rem 1.6rem 2.19rem 1.5rem;
+  padding: 1.6rem 1.5rem 2.19rem 1.6rem;
 
   background-color: #011c40;
 
-  &:hover {
-    padding: 1.9rem 1.6rem 2.19rem 1.5rem;
+  @include vp-1023 {
+    padding: 1.8rem 2.2rem 2.19rem 2.22rem;
+  }
+
+  @include vp-767 {
+    padding: 1.79rem 1.5rem 2.19rem 1.6rem;
   }
 }
 
@@ -77,10 +92,7 @@
 }
 
 .cruises__item h3 {
-  margin: 0;
-  position: absolute;
-  left: 30px;
-  bottom: 30px;
+  margin: 0 0 0.8rem;
 
   @include Montserrat500;
   font-size: 1.13em;
@@ -88,26 +100,54 @@
   color: $color-default-white;
 }
 
-.cruises__item:hover h3 {
-  position: static;
+.cruises__item h4 {
+  margin: 0;
+  position: absolute;
+  left: 30px;
+  bottom: 23px;
+  right: 20px;
 
-  margin-bottom: 0.8rem;
+  @include Montserrat500;
+  font-size: 1.13em;
+  line-height: 150%;
+  color: $color-default-white;
+
+  @include vp-1023 {
+    left: 36px;
+    bottom: 28px;
+  }
+
+  @include vp-767 {
+    left: 26px;
+    bottom: 18px;
+  }
+}
+
+.cruises__item:hover h4 {
+  display: none;
 }
 
 .cruises__item--hover {
-  padding: 1.9rem 1.6rem 2.19rem 1.5rem;
+  padding: 1.6rem 1.5rem 2.19rem 1.6rem;
 
   & img {
     z-index: -1;
   }
 
-  & h3 {
-    position: static;
-    margin-bottom: 0.8rem;
+  & h4 {
+    display: none;
+  }
+
+  @include vp-1023 {
+    padding: 1.8rem 2.2rem 2.19rem 2.22rem;
+  }
+
+  @include vp-767 {
+    padding: 1.79rem 1.5rem 2.19rem 1.6rem;
   }
 }
 
-.cruises__item h4 {
+.cruises__item h5 {
   margin: 0;
 
   @include Montserrat500;
@@ -117,15 +157,22 @@
 }
 
 .cruises__item p {
-  margin: 0 0 0.8rem;
+  margin: 0 0 0.6rem;
 
   font-size: 0.88em;
   line-height: 140%;
   color: $color-default-white;
+
+  @include vp-1023 {
+    margin: 0 0 0.8rem;
+  }
 }
 
 .cruises__button {
-  display: block;
+  display: flex;
+  align-self: end;
+  justify-content: center;
+  flex-wrap: wrap;
   width: 100%;
 
   text-align: center;
@@ -138,12 +185,16 @@
   font-size: 0.88em;
   line-height: 150%;
 
-  padding: .6rem 0;
-  margin-top: 1.6rem;
+  padding: 0.6rem 0;
+  margin-top: 0.6rem;
 
   cursor: pointer;
 
   @include hover-focus {
     opacity: 0.7;
+  }
+
+  @include vp-1023 {
+    margin-top: 0.9rem;
   }
 }

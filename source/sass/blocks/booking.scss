@@ -7,18 +7,84 @@
     background-image: url("../img/booking-background@2x.jpg");
   }
 
-  background-image: url("../img/booking-background.webp");
-
-  @include retina {
-    background-image: url("../img/booking-background@2x.webp");
-  }
-
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+
+  background-color: #92d8f0;
 }
 
 .booking__container {
-  padding: 3.13rem 10.19rem;
+  padding-top: 3.13rem;
+  padding-bottom: 3.13rem;
 
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+
+  @include vp-1699 {
+    padding: 3.13rem 10.19rem;
+  }
+
+  @include vp-1023 {
+    padding: 5.47rem 10rem 6.25rem;
+
+    flex-direction: column;
+    gap: 3.3rem;
+  }
+
+  @include vp-767 {
+    padding-top: 3.6rem;
+    padding-bottom: 4.13rem;
+    gap: 2rem;
+  }
+}
+
+.booking__wrap {
+  margin-left: 3.75rem;
+
+  @include vp-1023 {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.booking__wrap h3 {
+  margin: 0 0 0.5rem;
+
+  @include Montserrat700;
+  font-size: 2.5em;
+  line-height: 150%;
+
+  @include vp-1023 {
+    font-size: 2.13em;
+    text-align: center;
+    margin: 0 0 0.3rem;
+  }
+
+  @include vp-767 {
+    font-size: 1.5em;
+    line-height: 130%;
+    margin: 0 0 0.9rem;
+  }
+}
+
+.booking__wrap p {
+  width: 22rem;
+  margin: 0;
+
+  font-size: 1.13em;
+  line-height: 150%;
+
+  @include vp-1023 {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  @include vp-767 {
+    width: 96%;
+    font-size: 1em;
+    line-height: 140%;
+  }
 }
