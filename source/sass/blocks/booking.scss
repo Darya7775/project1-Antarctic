@@ -7,6 +7,10 @@
     background-image: url("../img/booking-background@2x.jpg");
   }
 
+  @include retina {
+    background-image: url("../img/booking-background@2x.webp");
+  }
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

@@ -139,6 +139,10 @@
     background-image: url("../img/main-background@2x.jpg");
   }
 
+  @include retina {
+    background-image: url("../img/main-background@2x.webp");
+  }
+
   background-color: rgb(47, 107, 247);
   background-repeat: no-repeat;
   background-size: cover;
