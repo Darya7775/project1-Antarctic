@@ -4,7 +4,11 @@
   background-image: url("../img/advantages-background.jpg");
 
   @include retina {
-    background-image: url("../img/advantages-backgroundd@2x.jpg");
+    background-image: url("../img/advantages-background@2x.jpg");
+  }
+
+  @include retina {
+    background-image: url("../img/advantages-background@2x.webp");
   }
 
   background-color: #e3ecf6;
