@@ -10,12 +10,12 @@
 
   @include vp-1023 {
     padding-top: 5.6rem;
-    padding-bottom: 3.5rem;
+    padding-bottom: 6.2rem;
   }
 
   @include vp-767 {
     padding-top: 3.6rem;
-    padding-bottom: 3.7rem;
+    padding-bottom: 4.14rem;
   }
 }
 
@@ -64,24 +64,43 @@
   grid-template-rows: repeat(10, auto);
   position: relative;
 
+  height: 24.13rem;
+
   padding: 1.6rem 1.5rem 2.19rem 1.6rem;
 
   background-color: #011c40;
+
+  &:hover {
+    overflow: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #d5f2f9 #839fdf;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+      height: 0;
+
+      background-color: #839fdf;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #d5f2f9;
+    }
+  }
 
   @include hover-focus {
     box-shadow: 0 0 5px 5px #2f6bf7;
   }
 
   @include vp-1023 {
-    padding: 1.8rem 2.2rem 2.19rem 2.22rem;
+    padding: 1.8rem 2.2rem 2.14rem 2.22rem;
   }
 
   @include vp-767 {
-    padding: 1.79rem 1.5rem 2.19rem 1.6rem;
+    padding: 1.79rem 1.5rem 2.15rem 1.6rem;
   }
 }
 
-.cruises__item img {
+.cruises__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -92,8 +111,16 @@
   bottom: 0;
 }
 
-.cruises__item:hover img,
-.cruises__item:focus img {
+.cruises__img--astoria {
+  object-position: 0 30%;
+}
+
+.cruises__img--odysseus {
+  object-position: 0 84%;
+}
+
+.cruises__item:hover .cruises__img,
+.cruises__item:focus .cruises__img {
   z-index: -1;
 }
 
@@ -146,11 +173,11 @@
   }
 
   @include vp-1023 {
-    padding: 1.8rem 2.2rem 2.19rem 2.22rem;
+    padding: 1.8rem 2.2rem 2.14rem 2.22rem;
   }
 
   @include vp-767 {
-    padding: 1.79rem 1.5rem 2.19rem 1.6rem;
+    padding: 1.79rem 1.5rem 2.15rem 1.6rem;
   }
 }
 
@@ -208,7 +235,7 @@
   }
 }
 
-.cruises__button:focus ~ picture img {
+.cruises__button:focus ~ picture .cruises__img {
   z-index: -1;
 }
 

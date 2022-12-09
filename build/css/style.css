@@ -649,7 +649,7 @@ button,
   background-color: #2f6bf7;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: 0 0;
   background-attachment: fixed;
 }
 
@@ -660,9 +660,6 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   gap: 1.5rem;
   padding-top: 2.19rem;
   padding-bottom: 2.19rem;
@@ -678,12 +675,15 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-column-gap: 1.44rem;
-  -moz-column-gap: 1.44rem;
-  column-gap: 1.44rem;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-column-gap: 2.05rem;
+  -moz-column-gap: 2.05rem;
+  column-gap: 2.05rem;
   row-gap: 1rem;
 }
 
@@ -708,6 +708,18 @@ button,
   opacity: 0.7;
 }
 
+.header__overlay {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(0, 43, 102, 0.5);
+  cursor: pointer;
+}
+
 .logo {
   display: block;
   width: 70px;
@@ -728,9 +740,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -753,6 +762,9 @@ button,
   row-gap: 1.5rem;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
 .footer__link {
@@ -783,6 +795,9 @@ button,
   row-gap: 1rem;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
 .social__link {
@@ -808,7 +823,7 @@ button,
   background-color: #2f6bf7;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: 0 0;
   background-attachment: fixed;
   -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -992,8 +1007,25 @@ button,
   -ms-grid-rows: (auto)[10];
   grid-template-rows: repeat(10, auto);
   position: relative;
+  height: 24.13rem;
   padding: 1.6rem 1.5rem 2.19rem 1.6rem;
   background-color: #011c40;
+}
+
+.cruises__item:hover {
+  overflow: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #d5f2f9 #839fdf;
+}
+
+.cruises__item:hover::-webkit-scrollbar {
+  width: 8px;
+  height: 0;
+  background-color: #839fdf;
+}
+
+.cruises__item:hover::-webkit-scrollbar-thumb {
+  background-color: #d5f2f9;
 }
 
 .cruises__item.focus-visible:focus {
@@ -1001,7 +1033,7 @@ button,
   box-shadow: 0 0 5px 5px #2f6bf7;
 }
 
-.cruises__item img {
+.cruises__img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -1013,8 +1045,18 @@ button,
   bottom: 0;
 }
 
-.cruises__item:hover img,
-.cruises__item:focus img {
+.cruises__img--astoria {
+  -o-object-position: 0 30%;
+  object-position: 0 30%;
+}
+
+.cruises__img--odysseus {
+  -o-object-position: 0 84%;
+  object-position: 0 84%;
+}
+
+.cruises__item:hover .cruises__img,
+.cruises__item:focus .cruises__img {
   z-index: -1;
 }
 
@@ -1107,7 +1149,7 @@ button,
   opacity: 0.7;
 }
 
-.cruises__button:focus ~ picture img {
+.cruises__button:focus ~ picture .cruises__img {
   z-index: -1;
 }
 
@@ -1133,14 +1175,17 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   gap: 2rem;
 }
 
 .booking__wrap {
   margin-left: 3.75rem;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
 .booking__wrap h3 {
@@ -1346,7 +1391,9 @@ input[type=checkbox]:checked + label::before {
 }
 
 .contacts__telephone {
+  display: block;
   padding-left: 1.75rem;
+  margin-bottom: 0.5rem;
   position: relative;
 }
 
@@ -1402,6 +1449,24 @@ input[type=checkbox]:checked + label::before {
     }
   }
 */
+
+@media (max-width: 162.57em) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 162.57em) and (-o-min-device-pixel-ratio: 3/2), (max-width: 162.57em) and (min-resolution: 144dpi), (max-width: 162.57em) and (min-resolution: 1.5dppx) {
+  .header {
+    background-image: url("../img/main-background@2x.jpg");
+  }
+
+  .header {
+    background-image: url("../img/main-background@2x.webp");
+  }
+
+  .main {
+    background-image: url("../img/main-background@2x.jpg");
+  }
+
+  .main {
+    background-image: url("../img/main-background@2x.webp");
+  }
+}
 
 @media (max-width: 162.57em) {
   .footer__list {
@@ -1486,8 +1551,16 @@ input[type=checkbox]:checked + label::before {
 }
 
 @media (max-width: 85.32em) {
+  .header {
+    background-size: 100% 100%;
+  }
+
   .footer__list {
     width: 39.1rem;
+  }
+
+  .main {
+    background-size: 100% 100%;
   }
 
   .description__container {
@@ -1539,6 +1612,11 @@ input[type=checkbox]:checked + label::before {
   }
 
   .header {
+    background-size: 100% 114%;
+    background-image: url("../img/main-background-tablet.jpg");
+  }
+
+  .header {
     min-height: 100px;
   }
 
@@ -1549,6 +1627,9 @@ input[type=checkbox]:checked + label::before {
 
   .header__list {
     width: 31.5rem;
+    -webkit-column-gap: 1.44rem;
+    -moz-column-gap: 1.44rem;
+    column-gap: 1.44rem;
   }
 
   .header__link {
@@ -1584,6 +1665,11 @@ input[type=checkbox]:checked + label::before {
   .social__link svg {
     width: 16px;
     height: 16px;
+  }
+
+  .main {
+    background-size: 100% 114%;
+    background-image: url("../img/main-background-tablet.jpg");
   }
 
   .main__container {
@@ -1670,7 +1756,7 @@ input[type=checkbox]:checked + label::before {
 
   .cruises__container {
     padding-top: 5.6rem;
-    padding-bottom: 3.5rem;
+    padding-bottom: 6.2rem;
   }
 
   .cruises__container h2 {
@@ -1689,7 +1775,7 @@ input[type=checkbox]:checked + label::before {
   }
 
   .cruises__item {
-    padding: 1.8rem 2.2rem 2.19rem 2.22rem;
+    padding: 1.8rem 2.2rem 2.14rem 2.22rem;
   }
 
   .cruises__item span {
@@ -1698,7 +1784,7 @@ input[type=checkbox]:checked + label::before {
   }
 
   .cruises__item--hover {
-    padding: 1.8rem 2.2rem 2.19rem 2.22rem;
+    padding: 1.8rem 2.2rem 2.14rem 2.22rem;
   }
 
   .cruises__item p {
@@ -1736,6 +1822,9 @@ input[type=checkbox]:checked + label::before {
 
   .form {
     margin-right: 0;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
   }
 
   .contacts__container {
@@ -1753,10 +1842,33 @@ input[type=checkbox]:checked + label::before {
   }
 }
 
+@media (max-width: 63.94em) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 63.94em) and (-o-min-device-pixel-ratio: 3/2), (max-width: 63.94em) and (min-resolution: 144dpi), (max-width: 63.94em) and (min-resolution: 1.5dppx) {
+  .header {
+    background-image: url("../img/main-background-tablet@2x.jpg");
+  }
+
+  .header {
+    background-image: url("../img/main-background-tablet@2x.webp");
+  }
+
+  .main {
+    background-image: url("../img/main-background-tablet@2x.jpg");
+  }
+
+  .main {
+    background-image: url("../img/main-background-tablet@2x.webp");
+  }
+}
+
 @media (max-width: 47.94em) {
   .container {
     padding-left: 0.94em;
     padding-right: 0.94em;
+  }
+
+  .header {
+    background-size: 100% 89%;
+    background-image: url("../img/main-background-mobile.jpg");
   }
 
   .header {
@@ -1771,15 +1883,22 @@ input[type=checkbox]:checked + label::before {
 
   .header__list {
     width: 17.82rem;
+    height: 100vh;
     background-color: #f9fbfd;
     padding: 5.31rem 0 1.5rem 1.56rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    row-gap: 1.75rem;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    row-gap: 1.6rem;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     right: 0;
   }
@@ -1829,15 +1948,16 @@ input[type=checkbox]:checked + label::before {
   }
 
   .header__button[data-state=active] {
-    width: 20px;
-    height: 20px;
+    width: 43px;
+    height: 62px;
     position: absolute;
     z-index: 2;
-    top: 1.56rem;
-    right: 0.94rem;
+    top: 0;
+    right: 0;
     background-image: url("../img/svg/icon-close.svg");
     background-repeat: no-repeat;
     background-position: center center;
+    background-size: 24px 12px;
   }
 
   .header__button[data-state=active].focus-visible:focus {
@@ -1875,6 +1995,16 @@ input[type=checkbox]:checked + label::before {
     flex-direction: column;
     margin-right: 0;
     row-gap: 1rem;
+  }
+
+  .social {
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+  }
+
+  .main {
+    background-size: 100% 89%;
+    background-image: url("../img/main-background-mobile.jpg");
   }
 
   .main__container {
@@ -1938,7 +2068,7 @@ input[type=checkbox]:checked + label::before {
 
   .cruises__container {
     padding-top: 3.6rem;
-    padding-bottom: 3.7rem;
+    padding-bottom: 4.14rem;
   }
 
   .cruises__container h2 {
@@ -1956,7 +2086,7 @@ input[type=checkbox]:checked + label::before {
   }
 
   .cruises__item {
-    padding: 1.79rem 1.5rem 2.19rem 1.6rem;
+    padding: 1.79rem 1.5rem 2.15rem 1.6rem;
   }
 
   .cruises__item span {
@@ -1965,7 +2095,7 @@ input[type=checkbox]:checked + label::before {
   }
 
   .cruises__item--hover {
-    padding: 1.79rem 1.5rem 2.19rem 1.6rem;
+    padding: 1.79rem 1.5rem 2.15rem 1.6rem;
   }
 
   .booking__container {
@@ -2007,7 +2137,7 @@ input[type=checkbox]:checked + label::before {
   .contacts__container {
     padding-top: 3.6rem;
     padding-bottom: 3.4rem;
-    gap: 2.5rem;
+    gap: 2rem;
     -ms-grid-rows: auto auto;
     grid-template-rows: auto auto;
     -ms-grid-columns: 1fr;
@@ -2023,43 +2153,37 @@ input[type=checkbox]:checked + label::before {
   }
 }
 
+@media (max-width: 47.94em) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 47.94em) and (-o-min-device-pixel-ratio: 3/2), (max-width: 47.94em) and (min-resolution: 144dpi), (max-width: 47.94em) and (min-resolution: 1.5dppx) {
+  .header {
+    background-image: url("../img/main-background-mobile@2x.jpg");
+  }
+
+  .header {
+    background-image: url("../img/main-background-mobile@2x.webp");
+  }
+
+  .main {
+    background-image: url("../img/main-background-mobile@2x.jpg");
+  }
+
+  .main {
+    background-image: url("../img/main-background-mobile@2x.webp");
+  }
+}
+
 @media (max-width: 47.94em) and (hover: hover) {
   .header__button[data-state=active]:hover:not(.focus-visible) {
     opacity: 0.5;
   }
 }
 
-@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+@media (max-width: 19.94em) {
   .header {
-    background-image: url("../img/main-background@2x.jpg");
-  }
-
-  .header {
-    background-image: url("../img/main-background@2x.webp");
+    background-size: cover;
   }
 
   .main {
-    background-image: url("../img/main-background@2x.jpg");
-  }
-
-  .main {
-    background-image: url("../img/main-background@2x.webp");
-  }
-
-  .advantages {
-    background-image: url("../img/advantages-background@2x.jpg");
-  }
-
-  .advantages {
-    background-image: url("../img/advantages-background@2x.webp");
-  }
-
-  .booking {
-    background-image: url("../img/booking-background@2x.jpg");
-  }
-
-  .booking {
-    background-image: url("../img/booking-background@2x.webp");
+    background-size: cover;
   }
 }
 
@@ -2091,5 +2215,23 @@ input[type=checkbox]:checked + label::before {
 
   .form__button:hover:not(.focus-visible) {
     opacity: 0.7;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .advantages {
+    background-image: url("../img/advantages-background@2x.jpg");
+  }
+
+  .advantages {
+    background-image: url("../img/advantages-background@2x.webp");
+  }
+
+  .booking {
+    background-image: url("../img/booking-background@2x.jpg");
+  }
+
+  .booking {
+    background-image: url("../img/booking-background@2x.webp");
   }
 }

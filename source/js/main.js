@@ -22,6 +22,8 @@ window.addEventListener('DOMContentLoaded', () => {
   const headerButtonText = document.querySelector('.header__text');
   const headerLogo = document.querySelector('.header__logo');
   const headerLinks = document.querySelectorAll('.header__link');
+  const mainContainer = document.querySelector('.main__container');
+  const overlay = document.querySelector('.header__overlay');
 
   const breakpointChecker = () => {
     if (breakpoint.matches) {
@@ -36,16 +38,29 @@ window.addEventListener('DOMContentLoaded', () => {
 
   headerButton.addEventListener('click', () => {
     if (headerButton.getAttribute('data-state') === 'active') {
-      headerLogo.style.display = 'block';
+      overlay.style.display = 'none';
+      headerLogo.style.marginLeft = '0';
+      mainContainer.style.paddingLeft = '';
       headerList.style.display = 'none';
       headerButton.setAttribute('data-state', '');
       headerButtonText.textContent = 'Открыть меню';
     } else {
-      headerLogo.style.display = 'none';
+      overlay.style.display = 'block';
+      headerLogo.style.marginLeft = '20px';
+      mainContainer.style.paddingLeft = '35px';
       headerList.style.display = 'flex';
       headerButton.setAttribute('data-state', 'active');
       headerButtonText.textContent = 'Закрыть меню';
     }
+  });
+
+  overlay.addEventListener('click', () => {
+    overlay.style.display = 'none';
+    headerLogo.style.marginLeft = '0';
+    mainContainer.style.paddingLeft = '';
+    headerList.style.display = 'none';
+    headerButton.setAttribute('data-state', '');
+    headerButtonText.textContent = 'Открыть меню';
   });
 
   headerLinks.forEach((link) => {

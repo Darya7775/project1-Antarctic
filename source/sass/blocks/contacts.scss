@@ -26,7 +26,7 @@
   @include vp-767 {
     padding-top: 3.6rem;
     padding-bottom: 3.4rem;
-    gap: 2.5rem;
+    gap: 2rem;
     grid-template-rows: auto auto;
     grid-template-columns: 1fr;
   }
@@ -104,7 +104,9 @@
 }
 
 .contacts__telephone {
+  display: block;
   padding-left: 1.75rem;
+  margin-bottom: 0.5rem;
 
   position: relative;
 

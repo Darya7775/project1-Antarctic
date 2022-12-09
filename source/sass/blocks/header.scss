@@ -19,7 +19,6 @@
 .header__container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   gap: 1.5rem;
 
   padding-top: 2.19rem;
@@ -47,8 +46,9 @@
 
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  column-gap: 1.44rem;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 2.05rem;
   row-gap: 1rem;
 
   @include vp-1919 {
@@ -61,18 +61,22 @@
 
   @include vp-1023 {
     width: 31.5rem;
+    column-gap: 1.44rem;
   }
 
   @include vp-767 {
     width: 17.82rem;
+    height: 100vh;
     background-color: $color-default-white;
     padding: 5.31rem 0 1.5rem 1.56rem;
 
     flex-direction: column;
-    row-gap: 1.75rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 1.6rem;
 
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     right: 0;
 
@@ -147,17 +151,18 @@
     background-position: center center;
 
     &[data-state="active"] {
-      width: 20px;
-      height: 20px;
+      width: 43px;
+      height: 62px;
 
       position: absolute;
       z-index: 2;
-      top: 1.56rem;
-      right: 0.94rem;
+      top: 0;
+      right: 0;
 
       background-image: url("../img/svg/icon-close.svg");
       background-repeat: no-repeat;
       background-position: center center;
+      background-size: 24px 12px;
 
       @include hover-focus {
         opacity: 0.5;
@@ -168,4 +173,18 @@
   @include hover-focus {
     opacity: 0.7;
   }
+}
+
+.header__overlay {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  background: rgba(0, 43, 102, 0.5);
+
+  cursor: pointer;
 }
