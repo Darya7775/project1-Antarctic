@@ -17,13 +17,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Header
 
-  const headerButton = document.querySelector('.header__button');
-  const headerList = document.querySelector('.header__list');
-  const headerButtonText = document.querySelector('.header__text');
-  const headerLogo = document.querySelector('.header__logo');
-  const headerLinks = document.querySelectorAll('.header__link');
+  const header = document.querySelector('.header');
+  const headerButton = header.querySelector('.header__button');
+  const headerList = header.querySelector('.header__list');
+  const headerButtonText = header.querySelector('.header__text');
+  const headerLogo = header.querySelector('.header__logo');
+  const headerLinks = header.querySelectorAll('.header__link');
   const mainContainer = document.querySelector('.main__container');
-  const overlay = document.querySelector('.header__overlay');
+  const overlay = header.querySelector('.header__overlay');
+  const body = document.querySelector('body');
 
   const breakpointChecker = () => {
     if (breakpoint.matches) {
@@ -38,6 +40,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   headerButton.addEventListener('click', () => {
     if (headerButton.getAttribute('data-state') === 'active') {
+      body.classList.remove('menu-opened');
       overlay.style.display = 'none';
       headerLogo.style.marginLeft = '0';
       mainContainer.style.paddingLeft = '';
@@ -45,6 +48,7 @@ window.addEventListener('DOMContentLoaded', () => {
       headerButton.setAttribute('data-state', '');
       headerButtonText.textContent = 'Открыть меню';
     } else {
+      body.classList.add('menu-opened');
       overlay.style.display = 'block';
       headerLogo.style.marginLeft = '20px';
       mainContainer.style.paddingLeft = '35px';
@@ -55,6 +59,7 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   overlay.addEventListener('click', () => {
+    body.classList.remove('menu-opened');
     overlay.style.display = 'none';
     headerLogo.style.marginLeft = '0';
     mainContainer.style.paddingLeft = '';
@@ -66,6 +71,14 @@ window.addEventListener('DOMContentLoaded', () => {
   headerLinks.forEach((link) => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
+      body.classList.remove('menu-opened');
+      headerList.style.display = 'none';
+      overlay.style.display = 'none';
+      headerLogo.style.marginLeft = '0';
+      mainContainer.style.paddingLeft = '';
+      headerList.style.display = 'none';
+      headerButton.setAttribute('data-state', '');
+      headerButtonText.textContent = 'Открыть меню';
       const id = link.getAttribute('href');
 
       document.querySelector(id).scrollIntoView({
