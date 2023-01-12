@@ -32,6 +32,19 @@ window.addEventListener('DOMContentLoaded', () => {
       headerList.style.display = 'flex';
     } else {
       headerList.style.display = 'none';
+      headerLinks.forEach((link) => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          body.classList.remove('menu-opened');
+          headerList.style.display = 'none';
+          overlay.style.display = 'none';
+          headerLogo.style.marginLeft = '0';
+          mainContainer.style.paddingLeft = '';
+          headerList.style.display = 'none';
+          headerButton.setAttribute('data-state', '');
+          headerButtonText.textContent = 'Открыть меню';
+        });
+      });
     }
   };
 
@@ -71,14 +84,14 @@ window.addEventListener('DOMContentLoaded', () => {
   headerLinks.forEach((link) => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
-      body.classList.remove('menu-opened');
-      headerList.style.display = 'none';
-      overlay.style.display = 'none';
-      headerLogo.style.marginLeft = '0';
-      mainContainer.style.paddingLeft = '';
-      headerList.style.display = 'none';
-      headerButton.setAttribute('data-state', '');
-      headerButtonText.textContent = 'Открыть меню';
+      // body.classList.remove('menu-opened');
+      // headerList.style.display = 'none';
+      // overlay.style.display = 'none';
+      // headerLogo.style.marginLeft = '0';
+      // mainContainer.style.paddingLeft = '';
+      // headerList.style.display = 'none';
+      // headerButton.setAttribute('data-state', '');
+      // headerButtonText.textContent = 'Открыть меню';
       const id = link.getAttribute('href');
 
       document.querySelector(id).scrollIntoView({
