@@ -27,6 +27,27 @@ window.addEventListener('DOMContentLoaded', () => {
   const overlay = header.querySelector('.header__overlay');
   const body = document.querySelector('body');
 
+  const openMenu = () => {
+    body.classList.add('menu-opened');
+    overlay.style.display = 'block';
+    headerLogo.style.marginLeft = '20px';
+    mainContainer.style.paddingLeft = '35px';
+    headerList.style.display = 'flex';
+    headerButton.setAttribute('data-state', 'active');
+    headerButtonText.textContent = 'Закрыть меню';
+  };
+
+  const closeMenu = () => {
+    body.classList.remove('menu-opened');
+    headerList.style.display = 'none';
+    overlay.style.display = 'none';
+    headerLogo.style.marginLeft = '0';
+    mainContainer.style.paddingLeft = '';
+    headerList.style.display = 'none';
+    headerButton.setAttribute('data-state', '');
+    headerButtonText.textContent = 'Открыть меню';
+  };
+
   const breakpointChecker = () => {
     if (breakpoint.matches) {
       headerList.style.display = 'flex';
@@ -35,14 +56,7 @@ window.addEventListener('DOMContentLoaded', () => {
       headerLinks.forEach((link) => {
         link.addEventListener('click', (e) => {
           e.preventDefault();
-          body.classList.remove('menu-opened');
-          headerList.style.display = 'none';
-          overlay.style.display = 'none';
-          headerLogo.style.marginLeft = '0';
-          mainContainer.style.paddingLeft = '';
-          headerList.style.display = 'none';
-          headerButton.setAttribute('data-state', '');
-          headerButtonText.textContent = 'Открыть меню';
+          closeMenu();
         });
       });
     }
@@ -53,45 +67,19 @@ window.addEventListener('DOMContentLoaded', () => {
 
   headerButton.addEventListener('click', () => {
     if (headerButton.getAttribute('data-state') === 'active') {
-      body.classList.remove('menu-opened');
-      overlay.style.display = 'none';
-      headerLogo.style.marginLeft = '0';
-      mainContainer.style.paddingLeft = '';
-      headerList.style.display = 'none';
-      headerButton.setAttribute('data-state', '');
-      headerButtonText.textContent = 'Открыть меню';
+      closeMenu();
     } else {
-      body.classList.add('menu-opened');
-      overlay.style.display = 'block';
-      headerLogo.style.marginLeft = '20px';
-      mainContainer.style.paddingLeft = '35px';
-      headerList.style.display = 'flex';
-      headerButton.setAttribute('data-state', 'active');
-      headerButtonText.textContent = 'Закрыть меню';
+      openMenu();
     }
   });
 
   overlay.addEventListener('click', () => {
-    body.classList.remove('menu-opened');
-    overlay.style.display = 'none';
-    headerLogo.style.marginLeft = '0';
-    mainContainer.style.paddingLeft = '';
-    headerList.style.display = 'none';
-    headerButton.setAttribute('data-state', '');
-    headerButtonText.textContent = 'Открыть меню';
+    closeMenu();
   });
 
   headerLinks.forEach((link) => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
-      // body.classList.remove('menu-opened');
-      // headerList.style.display = 'none';
-      // overlay.style.display = 'none';
-      // headerLogo.style.marginLeft = '0';
-      // mainContainer.style.paddingLeft = '';
-      // headerList.style.display = 'none';
-      // headerButton.setAttribute('data-state', '');
-      // headerButtonText.textContent = 'Открыть меню';
       const id = link.getAttribute('href');
 
       document.querySelector(id).scrollIntoView({
@@ -171,34 +159,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
-  // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
   });
 });
-
-// ---------------------------------
-
-// ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.
-
-// привязывайте js не на классы, а на дата атрибуты (data-validate)
-
-// вместо модификаторов .block--active используем утилитарные классы
-// .is-active || .is-open || .is-invalid и прочие (обязателен нейминг в два слова)
-// .select.select--opened ❌ ---> [data-select].is-open ✅
-
-// выносим все в дата атрибуты
-// url до иконок пинов карты, настройки автопрокрутки слайдера, url к json и т.д.
-
-// для адаптивного JS используется matchMedia и addListener
-// const breakpoint = window.matchMedia(`(min-width:1024px)`);
-// const breakpointChecker = () => {
-//   if (breakpoint.matches) {
-//   } else {
-//   }
-// };
-// breakpoint.addListener(breakpointChecker);
-// breakpointChecker();
-
-// используйте .closest(el)
